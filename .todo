@@ -1,0 +1,138 @@
+import './products.css'
+import Product from './Product'
+import React, { useState } from 'react';
+
+
+const Products = function Products({data}){
+    //console.log("DONNEES RECUES: ");
+    //console.log(data);
+    const allProducts = data;
+    const [productsData, setProductsData] = useState(allProducts);
+
+    function filtrer(min, max) {
+        return allProducts.filter(item => item.price >= min && item.price <= max);
+    }
+    
+    function refresh(newData){
+        setProductsData(newData);
+    }
+
+    return(
+        <div>
+            <div className='products_title'>
+                <h2>All Products</h2>
+            </div>
+            <div className='products_panel'>
+                {productsData.map(
+                    (item, index)=>(
+                        <Product key={index} data ={item}/>
+                    )
+                )}
+            </div>
+        </div>
+    );   
+}
+
+export default Products;
+
+voici le contenu de mon composant products
+le but est de rafraichir son contenu affiche en fonction des filtres min et max qui sont contenus dans le composant filter  ci dessous 
+
+import './filter.css';
+import React, { useState } from 'react';
+import './Products';
+
+const Filter = function Filter(){
+    const [min, setMin] = useState("");
+    const [max, setMax] = useState("");
+
+    const handleClick = () => {
+        
+    }
+
+    return (
+        <div>
+            <p>Prix min: <input type="text" value={min} onChange={e => setMin(e.target.value)} /></p>
+            <p>Prix max: <input type="text" value={max} onChange={e => setMax(e.target.value)} /></p>
+            <p><button onClick={handleClick}>Valider</button></p>
+        </div>
+    );
+}
+
+export default Filter;
+
+ecris donc le contenu  de handleclick en sorte d'invoquer filtrer(min,max)
+ces deux composants sont définis dans deux fichiers différents
+
+
+
+const mydata = [
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":2000,
+        "stock":45
+    },
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":12000,
+        "stock":500
+    },
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":55000,
+        "stock":45
+    },
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":73000,
+        "stock":40
+    },
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":45000,
+        "stock":12
+    },
+    {
+        "img":["img1.jpg","img2.jpg","img3.jpg","img4.jpg"],
+        "price":460000,
+        "stock":10
+    }
+];
+
+j'ai ce tableau JSON et je veux que tu crées la fonction JS filtrer(min, max) qui me retournera un tableau JSON contenant les memes structures d'objets mais dont les prix sont compris entre min et max bornes larges
+
+j'ai un composant A contenant la fonction c(d,e)
+et un composant B avec deux inputs et un bouton valider, quand je clique sur le bouton de B, le contenu des deux input sera passé en paramètre de la foncton c qui sera invoquée
+ecris moi ce code
+
+products panel
+const Products = function Products({data}){
+    //console.log("DONNEES RECUES: ");
+    //console.log(data);
+    function display_products({data}){
+        
+    }
+    function refresh({data}){
+
+    }
+    return(
+        <div>
+            <div className='products_title'>
+                <h2>All Products</h2>
+            </div>
+            <div className='products_panel'>
+                {data.map(
+                    (item, index)=>(
+                        <Product key={index} data ={item}/>
+                    )
+                )}
+            </div>
+        </div>
+    );   
+}
+j'ai ce composant react; je souhaite définir la fonction display_products que tu as plus haut
+cette fonction doit retourner exactement ce que contient le return ensuite elle appelle la fonction refresh qui doit changer l'affichage du composant avec le contenu de son argument. ecris les deux fonctions refresh et display_products
+
+☐ -- données de test(6)
+    ☐ -- images (4)
+

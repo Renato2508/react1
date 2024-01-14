@@ -1,0 +1,37 @@
+.product{
+    height: 400px;
+    width: 300px;
+    border: solid black;
+    margin:auto;
+
+}
+
+.product_img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3pt;
+    height: 50%;
+    width: 100%;
+}
+
+.product_vignette{
+    display: flex;
+    padding: 1pt;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.vignette{
+    height: 3pt;
+    width: 3pt;
+}
+
+.product_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}

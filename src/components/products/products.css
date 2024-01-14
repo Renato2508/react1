@@ -1,0 +1,12 @@
+.products_panel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 90vh;
+    
+}
+
+.products_title{
+    margin: auto;
+}

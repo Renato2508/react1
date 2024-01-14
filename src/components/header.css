@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height:3cm;
+    width: 100%;
+    margin: auto;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 60%;
+}
+
+.right{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 40%;
+}
+.input{
+    height: 25%;
+    width :40%;
+    margin: auto;
+}
